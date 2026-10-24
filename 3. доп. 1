@@ -1,0 +1,4 @@
+w = float(input('Enter your width: '))
+h = float(input('Enter your height: '))
+
+print(f"{w / (h ** 2):.1f}")
