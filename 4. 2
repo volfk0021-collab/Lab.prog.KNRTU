@@ -1,0 +1,4 @@
+a = float(input('введите число: '))
+b = float(input('введите число: '))
+c = float(input('введите число: '))
+print(max(a,b,c))
