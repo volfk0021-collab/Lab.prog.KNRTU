@@ -1,0 +1,11 @@
+def f(a):
+    s = ''
+    while a > 1:
+        s += str(a % 2)
+        a = a // 2
+    s += str(a)
+    return s[::-1]
+
+a = int(input())
+print(int(str(bin(a))[2::]))
+print(f(a))
