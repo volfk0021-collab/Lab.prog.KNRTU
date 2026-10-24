@@ -1,0 +1,6 @@
+a = float(input('введите первое число: '))
+b = float(input('введите второе число: '))
+c = float(input('введите третье число: '))
+print('среднее: ', (a + b + c) / 3)
+print('мин: ', min(a, b, c))
+print('макс: ', max(a, b, c))
