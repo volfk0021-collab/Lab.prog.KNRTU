@@ -1,0 +1,13 @@
+import sys
+b = input("Введите число: ")
+
+try:
+    number = int(b)
+except ValueError:
+    print("Ошибка: введено не целое число.")
+    sys.exit(1)
+bi = bin(int(b))[2:]
+oc = oct(int(b))[2:]
+he = hex(int(b))[2:].upper()
+
+print('двоичная: ', bi, 'восьмеричная:', oc, 'шестнадцатеричная: ', he)
