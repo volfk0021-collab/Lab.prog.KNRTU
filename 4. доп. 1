@@ -1,0 +1,10 @@
+import random
+a = random.randint(1,101)
+b = 1000
+while b!=a:
+    b = int(input("Введите число: "))
+    if b > a:
+        print('ваше число больше')
+    if b < a:
+        print('Ваше число меньше')
+print('Да. Это ', a)
