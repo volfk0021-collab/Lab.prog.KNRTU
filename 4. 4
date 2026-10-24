@@ -1,0 +1,17 @@
+a = float(input('введите a: '))
+b = float(input('введите b: '))
+c = float(input('введите c: '))
+if a == 0.0:
+    print('это не квадр. ур.')
+else:
+    D = b**2 - 4*a*c
+    if D < 0:
+        print('нет корней')
+    if D == 0:
+        x = -b/(2*a)
+        print(x)
+    if D > 0:
+        x1= -b+D**(1/2)/(2*a)
+        print(x1)
+        x2 = -b-D**(1/2)/(2*a)
+        print(x2)
