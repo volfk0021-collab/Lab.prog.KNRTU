@@ -1,0 +1,18 @@
+import datetime
+g = int(input('введите год рождения: '))
+m = int(input('введите месяц рождения: '))
+d = int(input('введите день рождения: '))
+s = str(datetime.date.today()).split('-')
+sg = int(s[0])
+sm = int(s[1])
+sd = int(s[-1])
+god = sg-g
+if sm<m:
+    print(god-1)
+elif sm==m:
+    if sd<d:
+        print(god-1)
+    else:
+        print(god)
+else:
+    print(god)
