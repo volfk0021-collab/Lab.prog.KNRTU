@@ -1,0 +1,24 @@
+import string
+
+a = input()
+c = 0
+z = 0
+
+for i in range(len(a)):
+    l = 0
+    try:
+        o = int(a[i])
+    except:
+        l = 1
+    if l == 0:
+        c += 1
+    if a[i] in string.punctuation:
+        z += 1
+
+p = a.count(' ')
+b = len(a) - c - p - z
+
+print('буквы:', b)
+print('цифры:', c)
+print('пробелы:', p)
+print('зп:', z)
