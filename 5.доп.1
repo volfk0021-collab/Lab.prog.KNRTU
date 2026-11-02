@@ -1,0 +1,18 @@
+import random
+N = [random.randint(1, 9) for _ in range(4)]
+k=0
+while k!=1:
+    B = 0
+    K = 0
+    f = int(input('Введите четырёхзначное число: '))
+    F = [int(i) for i in str(f)]
+    for i in range(4):
+        if N[i] == F[i]:
+            B+=1
+        else:
+            for G in range(len(N)):
+                if N[G] == F[i]:
+                    K+=1
+    print("быки: ", B, "коровы: ", K)
+    if B==4:
+        k+=1
