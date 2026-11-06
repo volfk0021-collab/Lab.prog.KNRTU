@@ -1,0 +1,26 @@
+def quicksort(a):
+    if len(a) <= 1:
+        return a
+    pivot = a[len(a) // 2]
+    left  = [x for x in a if x < pivot]
+    mid   = [x for x in a if x == pivot]
+    right = [x for x in a if x > pivot]
+    return quicksort(left) + mid + quicksort(right)
+
+d = [int(x) for x in input('введите числа через пробел').split()]
+K = int(input('введите число'))
+S = quicksort(d)
+print(S)
+m = S[len(S)//2]
+if K>m:
+    for x in S[len(S)//2:]:
+        if x == K:
+            print('в отсортированном: ', S.index(x), 'в неотсортированном: ', d.index(x))
+elif K<m:
+    for x in S[0:len(S)//2]:
+        if x == K:
+            print('в отсортированном: ', S.index(x), 'в неотсортированном: ', d.index(x))
+elif K==m:
+    print('в отсортированном: ', S.index(K), 'в неотсортированном: ', d.index(K))
+else:
+    print('элемент отсутствует')
