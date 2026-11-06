@@ -1,0 +1,29 @@
+A = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+B = [
+    [2, 3, 4],
+    [5, 6, 7],
+    [8, 9, 10]
+]
+#+
+res = [[0] * 3 for _ in range(3)]
+for i in range(len(A)):
+    for x in range(len(A[i])):
+        res[i][x] = A[i][x] + B[i][x]
+print('A+B',res)
+#-
+reso = [[0] * 3 for _ in range(3)]
+for i in range(len(A)):
+    for x in range(len(A[i])):
+        reso[i][x] = A[i][x] - B[i][x]
+print('A-B',reso)
+#*
+resu = [[0] * 3 for _ in range(3)]
+for i in range(len(A)):
+    for x in range(len(A[i])):
+            for k in range(len(A)):
+                resu[i][x] += A[i][k] * B[k][x]
+print('A*B',resu)
