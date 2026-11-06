@@ -1,0 +1,9 @@
+N = int(input('введите число: '))
+d = [int(x) for x in input('введите числа через пробел ').split()]
+for i in range(len(d)):
+    for x in range(len(d)):
+        if i!=x:
+            if d[i] + d[x] == N:
+                print(d[i], d[x])
+                d[i] = 0
+                d[x] = 0
