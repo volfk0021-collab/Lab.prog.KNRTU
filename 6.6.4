@@ -1,0 +1,21 @@
+def r(K,d):
+    for i in range(K):
+        d.insert(0, d[-1])
+        print(d)
+        d.pop(-1)
+        print(d)
+    return d
+def l(K,d):
+    for i in range(K):
+        d.append(d[0])
+        d.remove(d[0])
+    return d
+K = int(input('введите число: '))
+f = input("введите лево/право: ")
+d = [int(x) for x in input('введите числа через пробел ').split()]
+if f == 'лево':
+    print(l(K,d))
+elif f == 'право':
+    print(r(K,d))
+else:
+    print('ошибка')
