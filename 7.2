@@ -1,0 +1,11 @@
+import re
+def text(t):
+    t = t.lower()
+    t = re.sub(r'[^\w]', '', t)
+    if t == t[::-1]:
+        return 'полиндром'
+    else:
+        return 'не полиндром'
+
+t = input('введите текст: ')
+print(text(t))
