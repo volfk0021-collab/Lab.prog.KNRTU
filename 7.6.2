@@ -1,0 +1,12 @@
+import re
+def d(t):
+    m = 0
+    d = [x for x in t.split()]
+    for i in d:
+        i = re.sub(r'[^\w]', '', i)
+        if len(i)>m:
+            m = len(i)
+    return m
+
+t = input('введите текст: ')
+print(d(t))
