@@ -1,0 +1,17 @@
+def p(t,s, s2):
+    a = ''
+    e = [x for x in t.split()]
+    for i in range(len(e)):
+        if s in e[i].lower():
+            e[i] = e[i].replace(s,s2)
+        if len(a)==0:
+            a += e[i]
+        else:
+            a +=' '
+            a += e[i]
+    return a
+
+t = input('введите текст: ')
+s = input('введите слово: ')
+s2 = input('введите слово: ')
+print(p(t,s,s2))
