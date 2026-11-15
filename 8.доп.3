@@ -1,0 +1,17 @@
+import step, geometry
+n = input('введите комманду:' )
+if n == 'степень':
+    a = int(input('введите а'))
+    b = int(input('введите b'))
+    print(step.p(a,b))
+if n == 'круг':
+    r = int(input('введите r'))
+    print(geometry.krug(r))
+if n == 'прямоугольник':
+    a = int(input('введите а'))
+    b = int(input('введите b'))
+    print(geometry.pram(a,b))
+if n == 'треугольник':
+    a = int(input('введите а'))
+    h = int(input('введите h'))
+    print(geometry.treug(a,h))
